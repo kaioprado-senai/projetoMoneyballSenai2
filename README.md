@@ -89,4 +89,3 @@ O sistema deve aceitar apenas arquivos Excel válidos para importação de jogad
 
 RNF10 – Backup
 O sistema deve permitir a realização de cópias de segurança da base de dados para recuperação em caso de falhas.
-
