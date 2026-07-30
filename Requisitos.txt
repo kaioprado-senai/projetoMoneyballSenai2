@@ -1,0 +1,202 @@
+# 🏀 Documento de Especificação de Requisitos — Projeto Moneyball SENAI
+
+---
+
+# 📋 Requisitos Funcionais (RF)
+
+## 1. Autenticação e Controle de Usuários
+
+**RF01 – Login de Usuários**
+O sistema deve permitir que os usuários realizem login utilizando e-mail e senha.
+
+**RF02 – Controle de Usuários**
+O sistema deve permitir cadastrar, editar, excluir e consultar usuários conforme seu nível de acesso.
+
+**RF03 – Controle de Acesso**
+O sistema deve permitir acesso apenas a usuários autenticados, respeitando os níveis de permissão definidos.
+
+---
+
+## 2. Cadastro e Gerenciamento de Dados
+
+**RF04 – Cadastro de Jogadores**
+O sistema deve permitir cadastrar, editar, excluir e consultar jogadores.
+
+**RF05 – Importação de Jogadores**
+O sistema deve permitir importar o cadastro de jogadores por meio de planilhas no formato Excel.
+
+**RF06 – Consulta de Jogadores**
+O sistema deve permitir consultar informações cadastrais e estatísticas de qualquer jogador.
+
+**RF07 – Pesquisa de Jogadores**
+O sistema deve permitir pesquisar jogadores por nome, número, posição ou equipe.
+
+**RF08 – Cadastro de Partidas**
+O sistema deve permitir cadastrar, editar, excluir e consultar partidas.
+
+---
+
+## 3. Coleta de Dados da Partida
+
+**RF09 – Registro de Eventos em Tempo Real**
+O sistema deve permitir registrar eventos da partida (pontos, rebotes, assistências, roubos de bola, tocos, turnovers, faltas, entre outros), vinculando cada evento ao jogador e ao tempo da partida.
+
+**RF10 – Registro de Estatísticas Individuais**
+O sistema deve registrar automaticamente as estatísticas individuais dos jogadores durante cada partida.
+
+**RF11 – Geolocalização de Arremessos**
+O sistema deve permitir registrar a posição exata de cada arremesso em uma quadra virtual para geração do Shot Chart.
+
+---
+
+## 4. Processamento e Métricas Avançadas
+
+**RF12 – Cálculo Automático de Eficiência**
+O sistema deve calcular automaticamente métricas avançadas como eFG%, TS%, eficiência geral e demais indicadores definidos pela equipe.
+
+**RF13 – Cálculo de Posses de Bola**
+O sistema deve agrupar os eventos em posses de bola para calcular métricas como PPP (Points Per Possession), Offensive Rating e Defensive Rating.
+
+**RF14 – Monitoramento de Lineups**
+O sistema deve rastrear os cinco jogadores em quadra durante a partida para calcular Plus/Minus (+/-) e impacto coletivo.
+
+**RF15 – Cálculo do Melhor Desempenho Geral**
+O sistema deve calcular automaticamente o desempenho geral dos jogadores e identificar aquele com maior pontuação.
+
+**RF16 – Cálculo do Pior Desempenho Geral**
+O sistema deve identificar automaticamente o jogador com o menor desempenho geral.
+
+**RF17 – Cálculo da Regularidade**
+O sistema deve calcular um índice de regularidade dos jogadores considerando seu desempenho ao longo das partidas.
+
+**RF18 – Identificação da Estatística Mais Influente**
+O sistema deve identificar qual estatística possui maior influência na classificação dos jogadores conforme os critérios definidos pela equipe.
+
+**RF19 – Justificativa da Estatística Principal**
+O sistema deve apresentar uma justificativa para a estatística considerada mais importante na avaliação dos jogadores.
+
+---
+
+## 5. Consultas, Filtros e Visualização
+
+**RF20 – Visualização de Estatísticas**
+O sistema deve exibir estatísticas individuais e coletivas dos jogadores.
+
+**RF21 – Filtros Avançados**
+O sistema deve permitir filtrar informações por jogador, equipe, posição, campeonato, temporada, partida e período do jogo.
+
+**RF22 – Filtro por Estatísticas**
+O sistema deve permitir filtrar jogadores utilizando indicadores específicos como pontos, assistências, rebotes, roubos, tocos, eficiência, TS%, eFG%, PPP e demais métricas disponíveis.
+
+**RF23 – Dashboard Gerencial**
+O sistema deve apresentar dashboards contendo indicadores, gráficos e métricas de desempenho.
+
+---
+
+## 6. Rankings, Comparações e Relatórios
+
+**RF24 – Ranking Geral de Jogadores**
+O sistema deve gerar um ranking de desempenho dos jogadores conforme critérios definidos pela equipe.
+
+**RF25 – Ranking Top 5**
+O sistema deve apresentar automaticamente os cinco melhores jogadores juntamente com a metodologia utilizada para o cálculo da classificação.
+
+**RF26 – Ranking de Equipes**
+O sistema deve calcular a média de desempenho das equipes e gerar um ranking.
+
+**RF27 – Comparação entre Jogadores**
+O sistema deve permitir comparar estatísticas e métricas de dois ou mais jogadores.
+
+**RF28 – Comparação entre Períodos**
+O sistema deve comparar o desempenho de um jogador entre partidas, temporadas ou períodos distintos.
+
+**RF29 – Relatório de Scouting**
+O sistema deve gerar relatórios contendo tendências estatísticas da equipe adversária para auxiliar na preparação tática.
+
+**RF30 – Exportação de Relatórios**
+O sistema deve permitir exportar dashboards, rankings e relatórios nos formatos PDF e Excel.
+
+---
+
+## 7. Recursos Adicionais
+
+**RF31 – Tema Escuro**
+O sistema deve disponibilizar opção de tema escuro (Dark Mode).
+
+**RF32 – Pesquisa Dinâmica**
+O sistema deve realizar pesquisas em tempo real conforme o usuário digita.
+
+---
+
+# ⚙️ Requisitos Não Funcionais (RNF)
+
+## 1. Desempenho
+
+**RNF01 – Latência de Entrada**
+O registro de eventos da partida deve ser processado e exibido em até **200 ms**.
+
+**RNF02 – Atualização das Métricas**
+As métricas analíticas devem ser recalculadas em tempo real com atraso máximo de **2 segundos**.
+
+**RNF03 – Tempo de Resposta**
+Consultas e pesquisas devem ser respondidas em até **3 segundos** para bases contendo até **10.000 registros**.
+
+---
+
+## 2. Usabilidade
+
+**RNF04 – Interface Responsiva**
+A interface deve ser intuitiva, responsiva e adaptada para computadores, tablets e dispositivos móveis.
+
+**RNF05 – Interface Touch**
+As principais ações de coleta de dados deverão ser executadas com no máximo dois toques na tela.
+
+**RNF06 – Clareza Visual**
+Dashboards, rankings e relatórios devem possuir organização visual que facilite a interpretação dos dados.
+
+---
+
+## 3. Disponibilidade e Confiabilidade
+
+**RNF07 – Operação Offline**
+O sistema deve permitir registrar dados das partidas sem conexão com a internet e sincronizá-los automaticamente quando a conexão for restabelecida.
+
+**RNF08 – Disponibilidade**
+O sistema deve permanecer disponível durante todo o período de utilização, exceto em manutenções programadas.
+
+**RNF09 – Backup Automático**
+O sistema deve realizar backup automático local dos dados da partida a cada 60 segundos.
+
+**RNF10 – Backup da Base de Dados**
+O sistema deve permitir a realização de backups completos da base de dados para recuperação em caso de falhas.
+
+**RNF11 – Confiabilidade**
+O sistema deve preservar todas as informações cadastradas, minimizando riscos de perda de dados.
+
+---
+
+## 4. Segurança
+
+**RNF12 – Controle de Permissões**
+O sistema deve controlar o acesso conforme o perfil do usuário (Administrador, Comissão Técnica e Usuário).
+
+**RNF13 – Integridade dos Dados**
+O sistema deve validar as informações cadastradas, impedindo registros inconsistentes, duplicados ou incompatíveis com as regras do basquete.
+
+**RNF14 – Proteção das Informações**
+Relatórios estratégicos, rankings e dados sensíveis devem estar disponíveis apenas para usuários autorizados.
+
+---
+
+## 5. Compatibilidade e Escalabilidade
+
+**RNF15 – Compatibilidade**
+O sistema deve ser compatível com os principais navegadores modernos (Google Chrome, Microsoft Edge e Mozilla Firefox) e dispositivos móveis.
+
+**RNF16 – Escalabilidade**
+O sistema deve suportar milhares de jogadores, partidas, temporadas e campeonatos sem degradação significativa do desempenho.
+
+**RNF17 – Importação de Arquivos**
+O sistema deve aceitar apenas arquivos Excel válidos para importação de jogadores e realizar validação antes da importação.
+
+---
