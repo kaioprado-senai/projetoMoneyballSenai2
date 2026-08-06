@@ -1,0 +1,1 @@
+adotaremos a arquitetura monolítica, pois a mesma é a melhor opção (e também a única viável) para o nosso caso de agora (sql e php trabalham juntos e devem estar no mesmo e único projeto)
